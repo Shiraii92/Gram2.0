@@ -49,7 +49,7 @@ header nav ul li a {
     padding: 5px 10px;
     transition: background-color 0.3s ease;
     font-size: 16px; /* Kleinere Schriftgröße */
-    background: linear-gradient(45deg, #007bff, #00bfff); /* Bunte Verläufe */
+    background: linear-gradient(45deg, #ffcc00, #ffff00); /* Helleres Gelb */
     border-radius: 5px;
 }
 
@@ -72,14 +72,14 @@ header nav ul li a:hover {
 #hero h1 {
     font-size: 50px;
     margin: 0;
-    color: #007bff; /* Hellerer Blauton */
+    color: #00bfff; /* Türkisfarbene Schrift */
     text-shadow: 2px 2px 4px #000000; /* Schattierung für Text */
 }
 
 #hero p {
     font-size: 20px;
     margin: 20px 0;
-    color: #00bfff; /* Hellerer Blauton */
+    color: #00bfff; /* Türkisfarbene Schrift */
     text-shadow: 1px 1px 3px #000000;
 }
 
@@ -118,7 +118,4 @@ header nav ul li a:hover {
 
 .container {
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: white;
-    background: rgba(0, 0
+    max-width: 1200px

@@ -5,7 +5,7 @@ body {
     background: url('images/colorful-background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
-    overflow: hidden; /* Prevents scrolling with sound waves */
+    overflow: hidden; /* Verhindert Scrollen bei Schallwellen */
 }
 
 header {
@@ -18,21 +18,24 @@ header {
     z-index: 1000;
 }
 
-header img.logo {
-    width: 150px;
-    display: inline-block;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header nav {
-    display: inline-block;
-    float: right;
+header .logo {
+    width: 150px;
 }
 
 header nav ul {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
 header nav ul li {
@@ -54,36 +57,13 @@ header nav ul li a:hover {
 
 #hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100vh;
     color: white;
     background: rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-    padding: 20px;
-}
-
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    width: 100%;
-    max-width: 1200px;  /* Limit the maximum width */
-    margin: 0 auto;
-}
-
-.text-content {
-    flex: 1;
-    padding: 20px;
-}
-
-.image-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #hero h1 {
@@ -96,8 +76,12 @@ header nav ul li a:hover {
     margin: 20px 0;
 }
 
+#hero .animation {
+    margin-top: 20px;
+}
+
 #hero img#gramophone {
-    width: 300px; /* Adjust the size to fit better */
+    width: 300px;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -123,4 +107,6 @@ header nav ul li a:hover {
     height: 10px;
     background: rgba(0, 119, 181, 0.5);
     border-radius: 50%;
-    pointer-events
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}

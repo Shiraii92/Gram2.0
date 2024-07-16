@@ -98,7 +98,9 @@ header nav ul li a:hover {
 }
 
 #hero img#gramophone {
-    width: 100px; /* Adjust the size to fit better */
+    max-width: 100%; /* Ensures image scales down */
+    height: auto;
+    max-height: 300px; /* Ensures image doesn't get too large */
     transition: transform 0.3s ease;
     cursor: pointer;
 }

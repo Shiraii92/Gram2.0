@@ -67,7 +67,7 @@ header nav ul li a:hover {
 
 .hero-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: left;
     width: 80%;
@@ -98,9 +98,7 @@ header nav ul li a:hover {
 }
 
 #hero img#gramophone {
-    max-width: 100%; /* Ensures image scales down */
-    height: auto;
-    max-height: 300px; /* Ensures image doesn't get too large */
+    width: 300px; /* Adjust the size to fit better */
     transition: transform 0.3s ease;
     cursor: pointer;
 }

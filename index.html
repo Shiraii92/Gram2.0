@@ -27,22 +27,7 @@
             <h1>Welcome to Gram2.0</h1>
             <p>The funniest failure turned memecoin. Join us as we turn the story of a failed crypto giant into the greatest meme saga ever told.</p>
             <div class="animation">
-                <button onclick="toggleAnimation()">Play Sound</button>
-                <svg id="gramophone" width="300" height="300" viewBox="0 0 300 300">
-                    <!-- Grammophon -->
-                    <rect x="80" y="200" width="140" height="80" fill="#E97F02" />
-                    <polygon points="90,200 210,200 220,190 80,190" fill="#C65600" />
-                    <rect x="130" y="160" width="40" height="40" fill="#D69900" />
-                    <ellipse cx="150" cy="170" rx="20" ry="10" fill="#000" />
-                    <path d="M150 50 C100 80, 200 80, 150 50 Z" fill="#FFBF00" />
-                    <ellipse cx="150" cy="50" rx="30" ry="10" fill="#FFBF00" />
-                    <rect x="140" y="170" width="20" height="40" fill="#8A4B08" />
-                    <rect x="160" y="230" width="10" height="20" fill="#8A4B08" transform="rotate(45 165 240)" />
-                    <!-- Schallwellen -->
-                    <circle cx="150" cy="50" r="10" stroke="blue" stroke-width="2" fill="none" id="wave1" visibility="hidden"></circle>
-                    <circle cx="150" cy="50" r="20" stroke="blue" stroke-width="2" fill="none" id="wave2" visibility="hidden"></circle>
-                    <circle cx="150" cy="50" r="30" stroke="blue" stroke-width="2" fill="none" id="wave3" visibility="hidden"></circle>
-                </svg>
+                <img src="images/logo.png" alt="Gramophone" id="gramophone" onclick="toggleAnimation()">
             </div>
         </div>
     </section>
@@ -97,53 +82,32 @@
 
         function playAnimation() {
             animationPlaying = true;
-            document.querySelector("button").textContent = "Stop Sound";
-            interval = setInterval(() => {
-                let wave1 = document.getElementById("wave1");
-                let wave2 = document.getElementById("wave2");
-                let wave3 = document.getElementById("wave3");
-
-                wave1.setAttribute("visibility", "visible");
-                wave2.setAttribute("visibility", "visible");
-                wave3.setAttribute("visibility", "visible");
-
-                wave1.animate([
-                    { r: '10', opacity: 1 },
-                    { r: '300', opacity: 0 }
-                ], {
-                    duration: 2000,
-                    iterations: 1,
-                    easing: 'ease-out'
-                });
-
-                wave2.animate([
-                    { r: '20', opacity: 1 },
-                    { r: '310', opacity: 0 }
-                ], {
-                    duration: 2000,
-                    iterations: 1,
-                    easing: 'ease-out'
-                });
-
-                wave3.animate([
-                    { r: '30', opacity: 1 },
-                    { r: '320', opacity: 0 }
-                ], {
-                    duration: 2000,
-                    iterations: 1,
-                    easing: 'ease-out'
-                });
-
-            }, 500);
+            document.getElementById("gramophone").style.animation = "pulse 1s infinite";
+            interval = setInterval(createWave, 500);
         }
 
         function stopAnimation() {
             animationPlaying = false;
-            document.querySelector("button").textContent = "Play Sound";
+            document.getElementById("gramophone").style.animation = "";
             clearInterval(interval);
-            document.getElementById("wave1").setAttribute("visibility", "hidden");
-            document.getElementById("wave2").setAttribute("visibility", "hidden");
-            document.getElementById("wave3").setAttribute("visibility", "hidden");
+            let waves = document.querySelectorAll(".wave");
+            waves.forEach(wave => wave.remove());
+        }
+
+        function createWave() {
+            let wave = document.createElement("div");
+            wave.classList.add("wave");
+            document.body.appendChild(wave);
+
+            wave.animate([
+                { transform: 'scale(0)', opacity: 1 },
+                { transform: 'scale(5)', opacity: 0 }
+            ], {
+                duration: 3000,
+                easing: 'ease-out'
+            });
+
+            setTimeout(() => wave.remove(), 3000);
         }
     </script>
 </body>

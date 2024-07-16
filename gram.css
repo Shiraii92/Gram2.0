@@ -60,9 +60,12 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 20vh;
+    height: 100vh;
     color: white;
     background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;  /* Add some padding */
 }
 
 .hero-container {
@@ -73,8 +76,6 @@ header nav ul li a:hover {
     width: 100%;
     max-width: 1200px;  /* Limit the maximum width */
     margin: 0 auto;
-    padding: 0 20px;  /* Add some padding */
-    box-sizing: border-box;  /* Ensure padding is included in the element's total width and height */
 }
 
 .text-content {

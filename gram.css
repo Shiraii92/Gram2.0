@@ -66,7 +66,7 @@ header nav ul li a:hover {
     text-align: center;
     height: 100vh;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
+ 
 }
 
 #hero h1 {
@@ -116,6 +116,7 @@ header nav ul li a:hover {
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure waves are behind content */
 }
 
 .container {
@@ -123,6 +124,4 @@ header nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     color: white;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    margin-b
+    background: rgba(0

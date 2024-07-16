@@ -27,10 +27,16 @@
             <h1>Welcome to Gram2.0</h1>
             <p>The funniest failure turned memecoin. Join us as we turn the story of a failed crypto giant into the greatest meme saga ever told.</p>
             <div class="animation">
-                <svg width="200" height="200" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="none">
-                        <animate attributeName="r" from="10" to="40" dur="1.5s" repeatCount="indefinite" />
-                    </circle>
+                <button onclick="playAnimation()">Play Sound</button>
+                <svg id="gramophone" width="200" height="200" viewBox="0 0 100 100">
+                    <!-- Grammophon -->
+                    <rect x="45" y="60" width="10" height="30" fill="brown"></rect>
+                    <ellipse cx="50" cy="50" rx="30" ry="10" fill="gold"></ellipse>
+                    <path d="M 20 50 Q 50 10, 80 50" fill="none" stroke="gold" stroke-width="5"></path>
+                    <!-- Schallwellen -->
+                    <circle cx="50" cy="50" r="30" stroke="blue" stroke-width="2" fill="none" id="wave1" visibility="hidden"></circle>
+                    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill="none" id="wave2" visibility="hidden"></circle>
+                    <circle cx="50" cy="50" r="50" stroke="blue" stroke-width="2" fill="none" id="wave3" visibility="hidden"></circle>
                 </svg>
             </div>
         </div>
@@ -71,5 +77,40 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function playAnimation() {
+            document.getElementById("wave1").setAttribute("visibility", "visible");
+            document.getElementById("wave2").setAttribute("visibility", "visible");
+            document.getElementById("wave3").setAttribute("visibility", "visible");
+
+            document.getElementById("wave1").animate([
+                { r: '30', opacity: 1 },
+                { r: '50', opacity: 0 }
+            ], {
+                duration: 1000,
+                iterations: 1,
+                easing: 'ease-out'
+            });
+
+            document.getElementById("wave2").animate([
+                { r: '40', opacity: 1 },
+                { r: '60', opacity: 0 }
+            ], {
+                duration: 1000,
+                iterations: 1,
+                easing: 'ease-out'
+            });
+
+            document.getElementById("wave3").animate([
+                { r: '50', opacity: 1 },
+                { r: '70', opacity: 0 }
+            ], {
+                duration: 1000,
+                iterations: 1,
+                easing: 'ease-out'
+            });
+        }
+    </script>
 </body>
 </html>

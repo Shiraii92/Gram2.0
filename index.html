@@ -8,42 +8,42 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Gram2.0 Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#join">Join Us</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <img src="images/logo.png" alt="Gram2.0 Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#join">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section id="hero">
-        <div class="hero-content">
-            <div class="text-content">
-                <h1>Welcome to Gram2.0</h1>
-                <p>The funniest failure turned memecoin. Join us as we turn the story of a failed crypto giant into the greatest meme saga ever told.</p>
-            </div>
-            <div class="image-content">
-                <img src="images/image.png" alt="Gramophone" id="gramophone" onclick="toggleAnimation()">
+        <div class="container">
+            <h1>Welcome to Gram2.0</h1>
+            <p>The funniest failure turned memecoin. Join us as we turn the story of a failed crypto giant into the greatest meme saga ever told.</p>
+            <div class="animation">
+                <img src="logo.png" alt="Gramophone" id="gramophone" onclick="toggleAnimation()">
             </div>
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="container">
         <h2>The Tale of Gram2.0</h2>
         <p>Once upon a time, in the land of digital dreams, there was a project called Gram. Born from the ambitious minds at Telegram, it was destined to revolutionize the world of cryptocurrencies. But alas, fate had other plans...</p>
         <p>But where there’s a will, there’s a way, and from the ashes of Gram rose something even more extraordinary—Gram2.0, the ultimate memecoin!</p>
     </section>
 
-    <section id="community">
+    <section id="community" class="container">
         <h2>The Community That Laughs Together</h2>
         <p>Join the Gram2.0 community, where the motto is “Laugh at our past, enjoy the present, and meme our way to the future.” This memecoin is all about turning the past’s grand ambitions into today’s grand laughs. We’re not here to conquer the crypto world—we’re here to have a blast.</p>
     </section>
 
-    <section id="roadmap">
+    <section id="roadmap" class="container">
         <h2>The Great Gram2.0 Roadmap (A Joke in Itself)</h2>
         <ul>
             <li>Phase 1: Launch the Meme - Get the word out, spread the memes, and invite everyone to join the fun.</li>
@@ -52,17 +52,19 @@
         </ul>
     </section>
 
-    <section id="join">
+    <section id="join" class="container">
         <h2>Join Us</h2>
         <p>So, if you’re tired of all the serious, overly ambitious crypto projects and just want to have a good time, Gram2.0 is for you. Let’s turn the story of a failed crypto giant into the greatest meme saga ever told. Because at the end of the day, if you can’t laugh at yourself, what’s the point?</p>
         <p>Welcome to Gram2.0—where the past’s grand failure is today’s grand meme. Let’s make crypto fun again, one laugh at a time.</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Gram2.0. All rights reserved.</p>
-        <div class="socials">
-            <a href="#">Twitter</a>
-            <a href="#">Telegram</a>
+        <div class="container">
+            <p>&copy; 2024 Gram2.0. All rights reserved.</p>
+            <div class="socials">
+                <a href="#">Twitter</a>
+                <a href="#">Telegram</a>
+            </div>
         </div>
     </footer>
 
@@ -99,7 +101,7 @@
 
             wave.animate([
                 { transform: 'scale(0)', opacity: 1 },
-                { transform: 'scale(10)', opacity: 0 }
+                { transform: 'scale(5)', opacity: 0 }
             ], {
                 duration: 3000,
                 easing: 'ease-out'

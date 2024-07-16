@@ -97,8 +97,8 @@
         function createWave() {
             let wave = document.createElement("div");
             wave.classList.add("wave");
-            wave.style.left = `${window.innerWidth / 2}px`;  /* Set the starting point to the gramophone's position */
-            wave.style.top = `${window.innerHeight / 2}px`;
+            wave.style.left = `${document.getElementById("gramophone").offsetLeft + 150}px`;  /* Set the starting point to the gramophone's position */
+            wave.style.top = `${document.getElementById("gramophone").offsetTop + 150}px`;
             document.body.appendChild(wave);
 
             wave.animate([

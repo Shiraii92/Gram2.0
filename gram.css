@@ -60,6 +60,7 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 20vh;
     color: white;
     background: rgba(0, 0, 0, 0.5);
 }
@@ -69,9 +70,11 @@ header nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     text-align: left;
-    width: 80%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1200px;  /* Limit the maximum width */
     margin: 0 auto;
+    padding: 0 20px;  /* Add some padding */
+    box-sizing: border-box;  /* Ensure padding is included in the element's total width and height */
 }
 
 .text-content {

@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
     background: url('images/colorful-background.jpg') no-repeat center center fixed;
@@ -9,9 +9,9 @@ body {
 }
 
 header {
-    background-color: rgba(0, 119, 181, 0.8);
+    background-color: rgba(255, 105, 180, 0.8); /* Helleres Pink für mehr Farbe */
     color: white;
-    padding: 20px 0;
+    padding: 10px 0; /* Kleinere Padding */
     position: fixed;
     width: 100%;
     top: 0;
@@ -28,7 +28,7 @@ header .container {
 }
 
 header .logo {
-    width: 150px;
+    width: 100px; /* Kleinere Logo-Größe */
 }
 
 header nav ul {
@@ -39,7 +39,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 20px;
+    margin-left: 10px; /* Weniger Abstand */
 }
 
 header nav ul li a {
@@ -48,10 +48,13 @@ header nav ul li a {
     font-weight: bold;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
+    font-size: 16px; /* Kleinere Schriftgröße */
+    background: linear-gradient(45deg, #ffcc00, #ff6600); /* Bunte Verläufe */
+    border-radius: 5px;
 }
 
 header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
 }
 
@@ -69,11 +72,15 @@ header nav ul li a:hover {
 #hero h1 {
     font-size: 50px;
     margin: 0;
+    color: #ffcc00; /* Helle, auffällige Farben */
+    text-shadow: 2px 2px 4px #000000; /* Schattierung für Text */
 }
 
 #hero p {
     font-size: 20px;
     margin: 20px 0;
+    color: #ff6600;
+    text-shadow: 1px 1px 3px #000000;
 }
 
 #hero .animation {
@@ -110,3 +117,13 @@ header nav ul li a:hover {
     pointer-events: none;
     transform: translate(-50%, -50%);
 }
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0

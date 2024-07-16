@@ -5,7 +5,6 @@ body {
     background: url('images/colorful-background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
-    overflow: hidden; /* Verhindert Scrollen bei Schallwellen */
 }
 
 header {
@@ -72,14 +71,14 @@ header nav ul li a:hover {
 #hero h1 {
     font-size: 50px;
     margin: 0;
-    color: #ffcc00; /* Helle, auffällige Farben */
+    color: #007bff; /* Blauer Farbton aus dem Logo */
     text-shadow: 2px 2px 4px #000000; /* Schattierung für Text */
 }
 
 #hero p {
     font-size: 20px;
     margin: 20px 0;
-    color: #ff6600;
+    color: #007bff; /* Blauer Farbton aus dem Logo */
     text-shadow: 1px 1px 3px #000000;
 }
 
@@ -126,4 +125,9 @@ header nav ul li a:hover {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;

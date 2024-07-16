@@ -18,24 +18,21 @@ header {
     z-index: 1000;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+header img.logo {
+    width: 150px;
+    display: inline-block;
 }
 
-header .logo {
-    width: 150px;
+header nav {
+    display: inline-block;
+    float: right;
 }
 
 header nav ul {
     list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 header nav ul li {
@@ -63,12 +60,11 @@ header nav ul li a:hover {
     height: 100vh;
     color: white;
     background: rgba(0, 0, 0, 0.5);
-    width: 100%;
     box-sizing: border-box;
-    padding: 0 20px;  /* Add some padding */
+    padding: 20px;
 }
 
-.hero-container {
+.hero-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -127,6 +123,4 @@ header nav ul li a:hover {
     height: 10px;
     background: rgba(0, 119, 181, 0.5);
     border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-}
+    pointer-events

@@ -57,13 +57,34 @@ header nav ul li a:hover {
 
 #hero {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100vh;
     color: white;
     background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #hero h1 {
@@ -76,12 +97,8 @@ header nav ul li a:hover {
     margin: 20px 0;
 }
 
-#hero .animation {
-    margin-top: 20px;
-}
-
 #hero img#gramophone {
-    width: 200px; /* Resize the image to fit better */
+    width: 100px; /* Adjust the size to fit better */
     transition: transform 0.3s ease;
     cursor: pointer;
 }

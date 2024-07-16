@@ -49,7 +49,7 @@ header nav ul li a {
     padding: 5px 10px;
     transition: background-color 0.3s ease;
     font-size: 16px; /* Kleinere Schriftgröße */
-    background: linear-gradient(45deg, #ffcc00, #ff6600); /* Bunte Verläufe */
+    background: linear-gradient(45deg, #007bff, #00bfff); /* Bunte Verläufe */
     border-radius: 5px;
 }
 
@@ -66,20 +66,20 @@ header nav ul li a:hover {
     text-align: center;
     height: 100vh;
     color: white;
- 
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #hero h1 {
     font-size: 50px;
     margin: 0;
-    color: #007bff; /* Blauer Farbton aus dem Logo */
+    color: #007bff; /* Hellerer Blauton */
     text-shadow: 2px 2px 4px #000000; /* Schattierung für Text */
 }
 
 #hero p {
     font-size: 20px;
     margin: 20px 0;
-    color: #007bff; /* Blauer Farbton aus dem Logo */
+    color: #00bfff; /* Hellerer Blauton */
     text-shadow: 1px 1px 3px #000000;
 }
 
@@ -107,16 +107,13 @@ header nav ul li a:hover {
 }
 
 .wave {
-    position: fixed;
-    left: 50%;
-    top: 50%;
+    position: absolute; /* Fixiert die Wellen an ihrer Startposition */
     width: 10px;
     height: 10px;
     background: rgba(0, 119, 181, 0.5);
     border-radius: 50%;
     pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: -1; /* Ensure waves are behind content */
+    z-index: -1; /* Stellt sicher, dass die Wellen hinter dem Inhalt liegen */
 }
 
 .container {
@@ -124,4 +121,4 @@ header nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     color: white;
-    background: rgba(0
+    background: rgba(0, 0

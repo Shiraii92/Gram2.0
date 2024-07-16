@@ -5,7 +5,7 @@ body {
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
-    overflow: hidden; /* Verhindert Scrollen bei Schallwellen */
+    overflow: hidden; /* Prevents scrolling with sound waves */
 }
 
 header {
@@ -81,7 +81,7 @@ header nav ul li a:hover {
 }
 
 #hero img#gramophone {
-    width: 300px;
+    width: 200px; /* Resize the image to fit better */
     transition: transform 0.3s ease;
     cursor: pointer;
 }

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap'); /* Beispiel für eine gut lesbare Schriftart */
+
+
+/* Allgemeine Einstellungen */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
@@ -5,13 +9,13 @@ body {
     background: url('images/colorful-background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
-    overflow: auto; /* Ermöglicht Scrollen */
+    overflow: auto;
 }
 
 header {
-    background-color: rgba(255, 105, 180, 0.8); /* Helleres Pink für mehr Farbe */
+    background-color: rgba(255, 105, 180, 0.8);
     color: white;
-    padding: 10px 0; /* Kleinere Padding */
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -28,7 +32,7 @@ header .container {
 }
 
 header .logo {
-    width: 100px; /* Kleinere Logo-Größe */
+    width: 100px;
 }
 
 header nav ul {
@@ -39,7 +43,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 10px; /* Weniger Abstand */
+    margin-left: 10px;
 }
 
 header nav ul li a {
@@ -48,8 +52,8 @@ header nav ul li a {
     font-weight: bold;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
-    font-size: 16px; /* Kleinere Schriftgröße */
-    background: linear-gradient(45deg, #ffcc00, #ffff00); /* Helleres Gelb */
+    font-size: 16px;
+    background: linear-gradient(45deg, #ffcc00, #ffff00);
     border-radius: 5px;
 }
 
@@ -66,20 +70,20 @@ header nav ul li a:hover {
     text-align: center;
     height: 100vh;
     color: white;
-
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #hero h1 {
     font-size: 50px;
     margin: 0;
-    color: #00bfff; /* Türkisfarbene Schrift */
-    text-shadow: 2px 2px 4px #000000; /* Schattierung für Text */
+    color: #00bfff;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 #hero p {
     font-size: 20px;
     margin: 20px 0;
-    color: #00bfff; /* Türkisfarbene Schrift */
+    color: #00bfff;
     text-shadow: 1px 1px 3px #000000;
 }
 
@@ -107,13 +111,13 @@ header nav ul li a:hover {
 }
 
 .wave {
-    position: absolute; /* Fixiert die Wellen an ihrer Startposition */
+    position: absolute;
     width: 10px;
     height: 10px;
     background: rgba(0, 119, 181, 0.5);
     border-radius: 50%;
     pointer-events: none;
-    z-index: -1; /* Stellt sicher, dass die Wellen hinter dem Inhalt liegen */
+    z-index: -1;
 }
 
 section {
@@ -147,4 +151,41 @@ footer .socials a {
     transition: color 0.3s ease;
 }
 
-footer
+/* Media Queries für kleinere Bildschirme */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo {
+        width: 80px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #hero h1 {
+        font-size: 36px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    #hero img#gramophone {
+        width: 200px;
+    }
+
+    section {
+        padding: 10px;
+    }
+}

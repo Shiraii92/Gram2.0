@@ -116,12 +116,36 @@ header nav ul li a:hover {
     z-index: -1; /* Stellt sicher, dass die Wellen hinter dem Inhalt liegen */
 }
 
-.container {
+section {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box-Schatten */
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    margin-bottom: 20px;
 }
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 119, 181, 0.8);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .socials {
+    margin-top: 10px;
+}
+
+footer .socials a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer

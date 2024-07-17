@@ -130,8 +130,7 @@ footer {
     padding: 20px;
     text-align: center;
     color: white;
-    background-color: rgba(0, 119, 181, 0.8);
-    position: fixed;
+    background-color: rgba(255, 105, 180, 0.8);
     width: 100%;
     bottom: 0;
 }

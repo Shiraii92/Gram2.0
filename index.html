@@ -32,18 +32,18 @@
         </div>
     </section>
 
-    <section id="about" class="container box-shadow">
+    <section id="about" class="container about-box-shadow">
         <h2>The Tale of Gram2.0</h2>
         <p>Once upon a time, in the land of digital dreams, there was a project called Gram. Born from the ambitious minds at Telegram, it was destined to revolutionize the world of cryptocurrencies. But alas, fate had other plans...</p>
         <p>But where there’s a will, there’s a way, and from the ashes of Gram rose something even more extraordinary—Gram2.0, the ultimate memecoin!</p>
     </section>
 
-    <section id="community" class="container box-shadow">
+    <section id="community" class="container community-box-shadow">
         <h2>The Community That Laughs Together</h2>
         <p>Join the Gram2.0 community, where the motto is “Laugh at our past, enjoy the present, and meme our way to the future.” This memecoin is all about turning the past’s grand ambitions into today’s grand laughs. We’re not here to conquer the crypto world—we’re here to have a blast.</p>
     </section>
 
-    <section id="roadmap" class="container box-shadow">
+    <section id="roadmap" class="container roadmap-box-shadow">
         <h2>The Great Gram2.0 Roadmap (A Joke in Itself)</h2>
         <ul>
             <li>Phase 1: Launch the Meme - Get the word out, spread the memes, and invite everyone to join the fun.</li>
@@ -52,7 +52,7 @@
         </ul>
     </section>
 
-    <section id="join" class="container box-shadow">
+    <section id="join" class="container join-box-shadow">
         <h2>Join Us</h2>
         <p>So, if you’re tired of all the serious, overly ambitious crypto projects and just want to have a good time, Gram2.0 is for you. Let’s turn the story of a failed crypto giant into the greatest meme saga ever told. Because at the end of the day, if you can’t laugh at yourself, what’s the point?</p>
         <p>Welcome to Gram2.0—where the past’s grand failure is today’s grand meme. Let’s make crypto fun again, one laugh at a time.</p>
@@ -68,15 +68,39 @@
         </div>
     </footer>
 
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <div id="player" style="display: none;"></div> <!-- Hidden YouTube player -->
+
     <script>
         let animationPlaying = false;
         let interval;
+        let player;
+
+        // YouTube IFrame API ready
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '0',
+                width: '0',
+                videoId: 'd6wRkzCW5qI', // Replace with your YouTube video ID
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            // Player is ready
+        }
 
         function toggleAnimation() {
             if (animationPlaying) {
                 stopAnimation();
+                player.pauseVideo();
             } else {
                 playAnimation();
+                player.playVideo();
             }
         }
 
@@ -97,8 +121,10 @@
         function createWave() {
             let wave = document.createElement("div");
             wave.classList.add("wave");
-            wave.style.left = `${document.getElementById("gramophone").offsetLeft + 150}px`;  /* Set the starting point to the gramophone's position */
-            wave.style.top = `${document.getElementById("gramophone").offsetTop + 150}px`;
+            const gramophone = document.getElementById("gramophone");
+            const rect = gramophone.getBoundingClientRect();
+            wave.style.left = `${rect.left + rect.width / 2}px`;
+            wave.style.top = `${rect.top + rect.height / 2}px`;
             document.body.appendChild(wave);
 
             wave.animate([

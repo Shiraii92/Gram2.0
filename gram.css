@@ -128,22 +128,27 @@ section {
 
 .about-box-shadow {
     box-shadow: 0 4px 8px rgba(255, 105, 180, 0.5); /* Pink */
+    background: rgba(255,105,180,0.7);
 }
 
 .community-box-shadow {
     box-shadow: 0 4px 8px rgba(0, 119, 181, 0.5); /* Blue */
+    background: rgba(0, 119, 181, ,0.7);
 }
 
 .roadmap-box-shadow {
     box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5); /* Yellow */
+    background: rgba(255, 255, 0, 0.7);
 }
 
 .join-box-shadow {
     box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Green */
+    background: rgba(0, 255, 0, 0.7);
 }
 
 .tokenomics-box-shadow {
     box-shadow: 0 4px 8px rgba(0, 119, 181, 0.5); /* Blue */
+    background: rgba(0, 119, 181, 0.7);
 }
 
 .tokenomics-content {
@@ -181,6 +186,13 @@ footer .socials a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+}
+
+footer .socials .social-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    fill: white; /* Sicherstellen, dass die Icons weiß sind */
 }
 
 /* Media Queries für kleinere Bildschirme */

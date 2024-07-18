@@ -193,21 +193,46 @@ section {
     background: rgba(255, 255, 0, 0.8);
 }
 
+/* Zentrierte Spalten in der Tokenomics-Sektion */
 .tokenomics-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.tokenomics-content .description {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.tokenomics-content .animation {
+.tokenomics-content .description, .tokenomics-content .animation {
     flex: 1;
     text-align: center;
+    margin: 10px;
 }
+
+.animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#music-note {
+    width: 100px;
+    height: 100px;
+}
+
+#fill-animation {
+    fill: rgba(0, 0, 255, 0.5);
+}
+
+@keyframes fill {
+    0% { fill: rgba(0, 0, 255, 0.5); }
+    90% { fill: rgba(0, 0, 255, 0.5); }
+    100% { fill: rgba(0, 255, 0, 0.5); }
+}
+
+#fill-animation {
+    animation: fill 10s linear forwards;
+}
+
 
 @media (max-width: 768px) {
     section {

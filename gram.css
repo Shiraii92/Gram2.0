@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap'); /* Beispiel für eine gut lesbare Schriftart */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
 
-
-/* Allgemeine Einstellungen */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
@@ -9,13 +7,13 @@ body {
     background: url('images/colorful-background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
-    overflow: auto;
+    overflow: auto; /* Ermöglicht Scrollen */
 }
 
 header {
-    background-color: rgba(255, 105, 180, 0.8);
+    background-color: rgba(255, 105, 180, 0.8); /* Helleres Pink für mehr Farbe */
     color: white;
-    padding: 10px 0;
+    padding: 10px 0; /* Kleinere Padding */
     position: fixed;
     width: 100%;
     top: 0;
@@ -32,7 +30,7 @@ header .container {
 }
 
 header .logo {
-    width: 100px;
+    width: 100px; /* Kleinere Logo-Größe */
 }
 
 header nav ul {
@@ -43,7 +41,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 10px;
+    margin-left: 10px; /* Weniger Abstand */
 }
 
 header nav ul li a {
@@ -52,8 +50,8 @@ header nav ul li a {
     font-weight: bold;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
-    font-size: 16px;
-    background: linear-gradient(45deg, #ffcc00, #ffff00);
+    font-size: 16px; /* Kleinere Schriftgröße */
+    background: linear-gradient(45deg, #ffcc00, #ffff00); /* Helleres Gelb */
     border-radius: 5px;
 }
 
@@ -70,20 +68,19 @@ header nav ul li a:hover {
     text-align: center;
     height: 100vh;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
 }
 
 #hero h1 {
     font-size: 50px;
     margin: 0;
-    color: #00bfff;
-    text-shadow: 2px 2px 4px #000000;
+    color: #00bfff; /* Türkisfarbene Schrift */
+    text-shadow: 2px 2px 4px #000000; /* Schattierung für Text */
 }
 
 #hero p {
     font-size: 20px;
     margin: 20px 0;
-    color: #00bfff;
+    color: #00bfff; /* Türkisfarbene Schrift */
     text-shadow: 1px 1px 3px #000000;
 }
 
@@ -111,7 +108,7 @@ header nav ul li a:hover {
 }
 
 .wave {
-    position: absolute;
+    position: absolute; /* Fixiert die Wellen an ihrer Startposition */
     width: 10px;
     height: 10px;
     background: rgba(0, 119, 181, 0.5);
@@ -125,9 +122,44 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     color: white;
-    background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.about-box-shadow {
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.5); /* Pink */
+}
+
+.community-box-shadow {
+    box-shadow: 0 4px 8px rgba(0, 119, 181, 0.5); /* Blue */
+}
+
+.roadmap-box-shadow {
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5); /* Yellow */
+}
+
+.join-box-shadow {
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Green */
+}
+
+.tokenomics-box-shadow {
+    box-shadow: 0 4px 8px rgba(0, 119, 181, 0.5); /* Blue */
+}
+
+.tokenomics-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tokenomics-content .description {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.tokenomics-content .animation {
+    flex: 1;
+    text-align: center;
 }
 
 footer {
@@ -187,5 +219,14 @@ footer .socials a {
 
     section {
         padding: 10px;
+    }
+
+    .tokenomics-content {
+        flex-direction: column;
+    }
+
+    .tokenomics-content .description {
+        padding-right: 0;
+        margin-bottom: 20px;
     }
 }

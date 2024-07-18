@@ -214,10 +214,7 @@ section {
     margin-top: 20px;
 }
 
-#music-note {
-    width: 100px;
-    height: 100px;
-}
+
 
 #fill-animation {
     fill: rgba(0, 0, 255, 0.5);

@@ -34,6 +34,7 @@
             <div class="animation">
                 <img src="images/logo.png" alt="Gramophone" id="gramophone" onclick="toggleAnimation()">
             </div>
+             <div id="player" style="width:0; height: 0;"></div> <!-- YouTube-Player-Div hinzufügen -->
         </div>
     </section>
 
@@ -117,21 +118,38 @@
         let interval;
         let player;
 
-        // YouTube IFrame API ready
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '0',
-                width: '0',
-                videoId: 'd6wRkzCW5qI', // Replace with your YouTube video ID
-                events: {
-                    'onReady': onPlayerReady
-                }
-            });
-        }
+        var player;
 
-        function onPlayerReady(event) {
-            // Player is ready
+    // YouTube IFrame API ready
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            videoId: 'd6wRkzCW5qI', // Replace with your YouTube video ID
+            events: {
+                'onReady': onPlayerReady
+            },
+            playerVars: {
+                'autoplay': 0,
+                'controls': 0,
+                'showinfo': 0,
+                'modestbranding': 1,
+                'rel': 0,
+                'fs': 0,
+                'cc_load_policy': 0,
+                'iv_load_policy': 3,
+                'autohide': 1
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        // Player is ready
+    }
+
+    function playAudio() {
+        if (player) {
+            player.playVideo();
         }
+    }
 
         function toggleAnimation() {
             if (animationPlaying) {

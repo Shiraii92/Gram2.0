@@ -195,6 +195,7 @@ footer .socials .social-icon {
     fill: white; /* Sicherstellen, dass die Icons weiß sind */
 }
 
+
 /* Media Queries für kleinere Bildschirme */
 @media (max-width: 768px) {
     header .container {

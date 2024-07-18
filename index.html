@@ -53,24 +53,25 @@
         </ul>
     </section>
 
-     <section id="tokenomics" class="container tokenomics-box-shadow">
+    <section id="tokenomics" class="container tokenomics-box-shadow">
         <h2>Tokenomics</h2>
         <div class="tokenomics-content">
-            <div class="tokenomics-text">
-                <p>Total Supply: 5,000,000,000</p>
-                <p>Renounced</p>
-                <p>100% Liquidity Burned</p>
+            <div class="description">
+                <p><strong>Total Supply:</strong> 5,000,000,000</p>
+                <p><strong>Renounced:</strong> Yes</p>
+                <p><strong>Liquidity Burned:</strong> 100%</p>
             </div>
-            <div class="tokenomics-animation">
-                <svg viewBox="0 0 100 100" class="music-note">
-                    <path d="M50,10 L50,60 A10,10 0 1,1 40,70 L40,40 Z" fill="#FFD700"/>
-                    <rect x="48" y="60" width="4" height="30" fill="#FFD700"/>
-                    <path d="M50,60 L50,90 A10,10 0 1,1 60,80 L60,50 Z" fill="#FFD700" opacity="0.9">
-                        <animate attributeName="opacity" from="0" to="1" dur="2s" fill="freeze" />
-                    </path>
-                    <path d="M50,60 L50,90 A10,10 0 1,1 60,80 L60,50 Z" fill="#00BFFF" opacity="0">
-                        <animate attributeName="opacity" from="0" to="1" begin="2s" dur="1s" fill="freeze" />
-                    </path>
+            <div class="animation">
+                <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M100 10 C90 10, 70 20, 70 40 C70 60, 100 100, 100 120 C100 140, 100 180, 80 200 C60 180, 60 140, 60 120 C60 100, 110 60, 110 40 C110 20, 90 10, 100 10 Z" fill="none" stroke="black" stroke-width="2" />
+                        <rect class="fill-animation" x="70" y="40" width="40" height="0" fill="#0000FF">
+                            <animate attributeName="height" from="0" to="108" dur="2s" fill="freeze" />
+                        </rect>
+                        <rect class="fill-animation" x="70" y="148" width="40" height="0" fill="#FF0000">
+                            <animate attributeName="height" from="0" to="12" dur="2s" fill="freeze" begin="2s" />
+                        </rect>
+                    </g>
                 </svg>
             </div>
         </div>
@@ -107,7 +108,7 @@
             player = new YT.Player('player', {
                 height: '0',
                 width: '0',
-                videoId: 'd6wRkzCW5qI', // Replace with your YouTube video ID
+                videoId: 'YOUR_VIDEO_ID', // Replace with your YouTube video ID
                 events: {
                     'onReady': onPlayerReady
                 }

@@ -127,28 +127,28 @@ section {
 }
 
 .about-box-shadow {
-    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.5); /* Pink */
-    background: rgba(255,105,180,0.7);
+    box-shadow: 0 4px 8px rgba(0, 119, 181, 0.5); /* blau */
+    background: rgba(0, 191, 255, 0.8);
 }
 
 .community-box-shadow {
-    box-shadow: 0 4px 8px rgba(0, 119, 181, 0.5); /* Blue */
-    background: rgba(0, 119, 181, ,0.7);
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5); /* gelb */
+    background: rgba(255, 255, 0, 0.8);
 }
 
 .roadmap-box-shadow {
-    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5); /* Yellow */
-    background: rgba(255, 255, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.5); /* pink */
+    background: rgba(255, 105, 180, 0.8);
 }
 
 .join-box-shadow {
-    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Green */
-    background: rgba(0, 255, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 119, 181, 0.5); /* blau */
+    background: rgba(0, 191, 255, 0.8);
 }
 
 .tokenomics-box-shadow {
-    box-shadow: 0 4px 8px rgba(0, 119, 181, 0.5); /* Blue */
-    background: rgba(0, 119, 181, 0.7);
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5); /* gelb */
+    background: rgba(255, 255, 0, 0.8);
 }
 
 .tokenomics-content {
